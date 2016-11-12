@@ -1,7 +1,7 @@
 defmodule Koalog.PostController do
   use Koalog.Web, :controller
 
-  alias Koalog.Post
+  alias Koalog.{Post, RoleChecker}
 
   plug :assign_user
   plug :authorize_user when action in [:new, :create, :update, :edit, :delete]
@@ -68,9 +68,9 @@ defmodule Koalog.PostController do
     |> redirect(to: user_post_path(conn, :index, conn.assigns[:user]))
   end
 
-  defp authorize_user(conn, _opts) do
+  defp authorize_user(conn, _) do
     user = get_session(conn, :current_user)
-    if user && Integer.to_string(user.id) == conn.params["user_id"] do
+    if user && (Integer.to_string(user.id) == conn.params["user_id"] || RoleChecker.is_admin?(user)) do
       conn
     else
       conn
