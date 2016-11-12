@@ -6,6 +6,8 @@ defmodule Koalog.Post do
     field :body, :string
 
     timestamps()
+
+    belongs_to :user, Koalog.User
   end
 
   @doc """

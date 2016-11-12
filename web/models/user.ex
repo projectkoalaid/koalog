@@ -10,6 +10,8 @@ defmodule Koalog.User do
 
     timestamps()
 
+    has_many :posts, Koalog.Post
+
     # Virtual Fields
     field :password, :string, virtual: true
     field :password_confirmation, :string, virtual: true  
