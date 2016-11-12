@@ -16,6 +16,12 @@ defmodule Koalog.SessionControllerTest do
     assert get_flash(conn, :info) == "Sign in successful!"
     assert redirected_to(conn) == page_path(conn, :index)
   end
+  test "does not create a session with a bad login (empty username or password)", %{conn: conn} do
+    conn = post conn, session_path(conn, :create), user: %{username: "", password: ""}
+    refute get_session(conn, :current_user)
+    assert get_flash(conn, :error) == "Invalid username/password combination!"
+    assert redirected_to(conn) == page_path(conn, :index)
+  end
   test "does not create a session with a bad login", %{conn: conn} do
     conn = post conn, session_path(conn, :create), user: %{username: "test", password: "wrong"}
     refute get_session(conn, :current_user)
