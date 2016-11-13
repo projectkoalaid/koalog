@@ -21,7 +21,7 @@ defmodule Koalog.Mixfile do
   def application do
     [mod: {Koalog, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin]]
+                    :phoenix_ecto, :postgrex, :comeonin, :ex_machina]]
   end
 
   # Specifies which paths to compile per environment.
@@ -41,7 +41,9 @@ defmodule Koalog.Mixfile do
      {:gettext, "~> 0.11"},
      {:excoveralls, "~> 0.5", only: :test},
      {:cowboy, "~> 1.0"},
-     {:comeonin, "~> 2.3"}]
+     {:comeonin, "~> 2.5.2"},
+     {:ex_machina, "~> 1.0"},
+     {:earmark, "~> 1.0.1"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
