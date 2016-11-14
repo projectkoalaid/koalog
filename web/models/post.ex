@@ -8,6 +8,7 @@ defmodule Koalog.Post do
     timestamps()
 
     belongs_to :user, Koalog.User
+    has_many :comments, Koalog.Comment
   end
 
   @doc """
