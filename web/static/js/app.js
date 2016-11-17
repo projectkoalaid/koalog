@@ -18,4 +18,10 @@ import "phoenix_html"
 // Local files can be imported directly using relative
 // paths "./socket" or full ones "web/static/js/socket".
 
-// import socket from "./socket"
+import socket from "./socket"
+import $ from "jquery"
+
+$("input[type=submit]").on("click", (event) => {
+  event.preventDefault()
+  channel.push(CREATED_COMMENT, { author: "test", body: "body" })
+})
