@@ -1,0 +1,13 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Koalog - Blog written by projectkoalaid">
+  <meta name="author" content="Fajar Firdaus">
+  <%= if current_user = @conn.assigns[:current_user] do %>
+    <%= tag :meta, name: "channel_token", content: Phoenix.Token.sign(@conn, "user", current_user.id) %>
+  <% end %>
+
+  <title>Koalog</title>
+  <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+</head>

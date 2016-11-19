@@ -7,6 +7,7 @@ defmodule Koalog.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug Koalog.CurrentUserPlug
   end
 
   pipeline :api do
@@ -21,7 +22,7 @@ defmodule Koalog.Router do
       resources "/posts", PostController
     end
     resources "/sessions", SessionController, only: [:new, :create, :delete]
-    resources "/posts", PostController, only: [] do
+    resources "/posts", PostController, only: [:index] do
       resources "/comments", CommentController, only: [:create, :delete, :update]
     end
   end
