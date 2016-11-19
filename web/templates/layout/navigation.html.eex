@@ -2,7 +2,7 @@
   <div class="top-bar-left">
     <ul class="menu">
       <li class="logo">
-        Phoenix Tech Blog
+        Koalog - Project Koala ID
       </li>
       <li>
         <%= link "Home", to: page_path(@conn, :index) %>
