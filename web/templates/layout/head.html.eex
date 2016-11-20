@@ -9,5 +9,9 @@
   <% end %>
 
   <title>Koalog</title>
+  <%= if css = @conn.assigns[:css] do %>
+  <link rel="stylesheet" href="<%= css %>">
+  <%= else %>
   <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  <%= end %>
 </head>

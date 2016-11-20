@@ -3,6 +3,6 @@ defmodule Koalog.PageControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"
-    assert html_response(conn, 200) =~ "Welcome to Koalog!"
+    assert html_response(conn, 200) =~ "Recommended for you"
   end
 end

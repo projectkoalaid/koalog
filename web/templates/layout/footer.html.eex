@@ -1,0 +1,34 @@
+<footer id="pageFooter" class="full-page">
+    <section class="grid grid-fixed">
+        <article class=" grid-col grid-col--tiles" style="position: absolute;left: 0px;top: 31.75px;">
+
+            <ul class="social-sharing__icons">
+
+                <li><a id="footer_facebook" href="https://www.facebook.com/allrecipes" title="Facebook" target="_blank" class="ui-link"><img title="Facebook" src="http://images.allrecipes.com/ar-images/spacer.gif" alt="Facebook"></a></li>
+                <li><a id="footer_pinterest" href="http://pinterest.com/allrecipes/" title="Pinterest" target="_blank" class="ui-link"><img title="Pinterest" src="http://images.allrecipes.com/ar-images/spacer.gif" alt="Pinterest"></a></li>
+                <li><a id="footer_twitter" href="https://twitter.com/Allrecipes" title="Twitter" target="_blank" class="ui-link"><img id="ctl00_Image3" title="Twitter" src="http://images.allrecipes.com/ar-images/spacer.gif" alt="Twitter"></a></li>
+                <li><a id="footer_instagram" href="http://instagram.com/allrecipes" title="Instagram" target="_blank" class="ui-link"><img title="Instagram" src="http://images.allrecipes.com/ar-images/spacer.gif" alt="Instagram"></a></li>
+                <li><a id="footer_tumblr" href="http://allrecipes.tumblr.com/" title="Tumblr" target="_blank" class="ui-link"><img title="Tumblr" src="http://images.allrecipes.com/ar-images/spacer.gif" alt="Tumblr"></a></li>
+                <li><a id="footer_googleplus" href="https://plus.google.com/+allrecipes/" title="Google Plus" target="_blank" class="ui-link"><img title="Google Plus" src="http://images.allrecipes.com/ar-images/spacer.gif" alt="Google Plus"></a></li>
+                <li><a id="footer_stumbleupon" href="http://www.stumbleupon.com/stumbler/Allrecipes" title="StumbleUpon" target="_blank" class="ui-link"><img title="StumbleUpon" src="http://images.allrecipes.com/ar-images/spacer.gif" alt="StumbleUpon"></a></li>
+                <li><a id="footer_youtube" href="https://www.youtube.com/user/allrecipes" title="YouTube" target="_blank" class="ui-link"><img title="YouTube" src="http://images.allrecipes.com/ar-images/spacer.gif" alt="YouTube"></a></li>
+            </ul>
+        </article>
+
+        <article class="grid-col grid-col--tiles" style="position: absolute; left: 408px; top: 31.75px;">
+            <ul>
+                <li>About Us</li>
+                <li><a id="footer_newsroom" href="http://press.allrecipes.com/" target="_self">Newsroom</a></li>
+                <li><a id="footer_jobs" href="http://dish.allrecipes.com/allrecipes-jobs/" target="_self">Jobs at Allrecipes</a></li>
+            </ul>
+        </article>
+
+        <article class="grid-col grid-col--tiles footer_advertising" style="position: absolute; left: 817px; top: 31.75px;">
+            <ul>
+                <li>Advertising</li>
+                <li><a id="footer_advertisewithus" class="" href="http://www.meredith.com/national-media/digital" target="_self">Advertise with Us</a></li>
+                <li><a id="footer_womensnetwork" class="" href="http://www.meredith.com/marketing_solutions/interactive_media.html" target="_self">Meredith Women's Network</a></li>
+            </ul>
+        </article>
+    </section>
+</footer>

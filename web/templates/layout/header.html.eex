@@ -1,0 +1,53 @@
+<header class="header new-nav">
+    <ul class="ar-nav-section">
+        <li class="ar-logo-tab">
+            <a href="/" target="_self">
+                <div class="ar-logo">
+                    <img src="http://images.media-allrecipes.com/ar-images/ARlogo.svg" alt="My Recipes" width="96">
+                </div>
+            </a>
+        </li>
+        <li class="browse-recipes">
+            <a href="#" id="navmenu_recipes" class="recipes-txt">
+                <span>BROWSE</span><span class="icon--chevron-down"></span>
+            </a>
+        </li>
+        <li class="search-tab ng-scope" ng-controller="ar_controllers_search">
+            <div class="nav-search">
+                <input id="searchText" type="text" placeholder="Find a recipe">
+                <button class="btn-basic--small search-button">
+                    <span class="icon svg-icon--top-nav-bar--search-magnify svg-icon--top-nav-bar--search-magnify-dims"></span>
+                </button>
+                <div id="ingredientSearch" class="ingredient-searchtxt">Ingredient Search</div>
+            </div>
+        </li>
+        <li class="social-notification">
+            <div class="socialNotification">
+                <span class="svg-icon--top-nav-bar--nav-bell svg-icon--top-nav-bar--nav-bell-dims"></span>
+                <span class="notification-count ng-binding" >1</span>
+            </div>
+        </li>
+        <li class="nav-favorites">
+            <a href="#" target="_self">
+                <span class="svg-icon--top-nav-bar--grey-heart svg-icon--top-nav-bar--grey-heart-dims"></span>
+            </a>
+        </li>
+        <li class="nav-profile anonymous-user">
+            <a href="#" target="_self">
+                <div class="login-state">
+                    <div class="img-profile icon svg-icon--top-nav-bar--userhead svg-icon--top-nav-bar--userhead-dims"></div>
+                    <span class="username icon-user--default" id="offCanvasDisplayName">Create a profile</span>
+                </div>
+            </a>
+        </li>
+        <li class="hamburger-tab">
+            <a href="#">
+                <div class="hamburger-nav">
+                    <span class="browse-recipes-iconbar"></span>
+                    <span class="browse-recipes-iconbar"></span>
+                    <span class="browse-recipes-iconbar"></span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</header>

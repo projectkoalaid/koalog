@@ -1,0 +1,30 @@
+<section class="slider">
+
+    <article class="slider__slide">
+        <a data-carousel-link="" data-internal-referrer="hp_carousel 04_Tortilla Soup Recipes" data-referring-position="carousel 04" href="http://allrecipes.com/recipes/16563/soups-stews-and-chili/soup/tortilla-soup/?internalSource=hp_carousel 04_Tortilla Soup Recipes&amp;referringContentType=home page&amp;referringPosition=carousel 04" target="_self">
+            <div class="slider__text">
+                <h3>Tortilla Soup Recipes</h3>
+                <p class="slider__description">As comforting as chicken noodle soup, but a lot crunchier.</p>
+            </div>
+            <img src="http://images.media-allrecipes.com/images/72532.jpg" class="slider__photo">
+        </a>
+    </article>
+    <article class="slider__slide">
+        <a data-carousel-link="" data-internal-referrer="hp_carousel 05_Simple Scones" data-referring-position="carousel 05" href="http://allrecipes.com/recipes/1997/bread/quick-bread/scones/?internalSource=hp_carousel 05_Simple Scones&amp;referringContentType=home page&amp;referringPosition=carousel 05" target="_self">
+            <div class="slider__text">
+                <h3>Simple Scones</h3>
+                <p class="slider__description">Pumpkin, maple, or classic currant: these top-rated scone recipes are better than the coffee shop's.</p>
+            </div>
+            <img src="http://images.media-allrecipes.com/images/60501.jpg" class="slider__photo">
+        </a>
+    </article>
+    <article class="slider__slide">
+        <a data-carousel-link="" data-internal-referrer="hp_carousel 06_How To Roast Pumpkin Seeds" data-referring-position="carousel 06" href="http://dish.allrecipes.com/how-to-roast-pumpkin-seeds/?internalSource=hp_carousel 06_How To Roast Pumpkin Seeds&amp;referringContentType=home page&amp;referringPosition=carousel 06" target="_self">
+            <div class="slider__text">
+                <h3>How To Roast Pumpkin Seeds</h3>
+                <p class="slider__description">Toasted and salted, pumpkin seeds have a nutty flavor. Seasoned with sweet and savory spices, they're even better.</p>
+            </div>
+            <img src="http://images.media-allrecipes.com/images/72317.jpg" class="slider__photo">
+        </a>
+    </article>
+</section>
