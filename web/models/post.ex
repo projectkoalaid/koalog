@@ -19,6 +19,21 @@ defmodule Koalog.Post do
     |> cast(params, [:title, :body])
     |> validate_required([:title, :body])
     |> strip_unsafe_body(params)
+    |> validate_featured_image
+  end
+
+  defp validate_featured_image(changeset) do
+    body = get_field(changeset, :body)
+    case extract_featured_image(body) do
+      %{"url" => _} -> changeset
+      _ -> add_error(changeset, :body, "Need to have featured image")
+    end
+  end
+
+  defp extract_featured_image(body) when is_nil(body), do: nil
+
+  defp extract_featured_image(body) do
+    Regex.named_captures(~r/!\[.*?\]\((?<url>.*?)\)/, body)
   end
 
   defp strip_unsafe_body(model, %{"body" => nil}) do

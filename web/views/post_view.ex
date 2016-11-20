@@ -6,4 +6,11 @@ defmodule Koalog.PostView do
     |> Earmark.to_html
     |> raw
   end
+
+  def featured_image(body) do
+  	case Regex.named_captures(~r/!\[.*?\]\((?<url>.*?)\)/, body) do
+  		%{"url" => url} -> url
+  		_ -> nil
+  	end
+  end
 end

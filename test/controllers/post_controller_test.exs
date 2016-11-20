@@ -4,7 +4,7 @@ defmodule Koalog.PostControllerTest do
 
   import Koalog.Factory
   
-  @valid_attrs %{body: "some content", title: "some content"}
+  @valid_attrs %{body: "some content ![image](http://abc)", title: "some content"}
   @invalid_attrs %{}
   setup do
     role = insert(:role)

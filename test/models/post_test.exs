@@ -3,7 +3,7 @@ defmodule Koalog.PostTest do
 
   alias Koalog.Post
 
-  @valid_attrs %{body: "some content", title: "some content"}
+  @valid_attrs %{body: "some content ![image](http://abc)", title: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
@@ -13,6 +13,12 @@ defmodule Koalog.PostTest do
 
   test "changeset with invalid attributes" do
     changeset = Post.changeset(%Post{}, @invalid_attrs)
+    refute changeset.valid?
+  end
+
+  test "body without image is invalid attribute" do
+    attrs = @valid_attrs |> Map.merge(%{body: "only text without image"})
+    changeset = Post.changeset(%Post{}, attrs)
     refute changeset.valid?
   end
 
