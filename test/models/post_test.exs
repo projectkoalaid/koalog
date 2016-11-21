@@ -36,4 +36,8 @@ defmodule Koalog.PostTest do
     changeset = Post.changeset(%Post{}, @valid_attrs)
     assert get_change(changeset, :body) == @valid_attrs[:body]
   end
+
+  test "test featured list n post ordered by number of approved comment and their timestamp" do
+    assert false
+  end
 end

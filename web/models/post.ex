@@ -11,6 +11,14 @@ defmodule Koalog.Post do
     has_many :comments, Koalog.Comment
   end
 
+  def featured(n) do
+    from p in Koalog.Post,
+      left_join: c in Koalog.Comment, on: c.post_id == p.id and c.approved,
+      group_by: p.id,
+      order_by: [desc: count(c.id), desc: p.id],
+      limit: ^n
+  end
+
   @doc """
   Builds a changeset based on the `struct` and `params`.
   """

@@ -13,4 +13,8 @@ defmodule Koalog.PostView do
   		_ -> nil
   	end
   end
+
+  def snippet(body) do
+    String.slice(body, 0, 30)
+  end
 end

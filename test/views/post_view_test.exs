@@ -21,5 +21,10 @@ defmodule Koalog.PostViewTest do
     assert is_nil result
   end
 
+  test "snippet get first 30 characters" do
+    result = Koalog.PostView.snippet("abcdefghijabcdefghijabcdefghijnotshown")
+    assert String.length(result) == 30
+    refute String.contains? result, "notshown"
+  end
 
 end
