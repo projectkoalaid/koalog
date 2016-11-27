@@ -3,7 +3,7 @@
         <li class="ar-logo-tab">
             <a href="/" target="_self">
                 <div class="ar-logo">
-                    <img src="http://images.media-allrecipes.com/ar-images/ARlogo.svg" alt="My Recipes" width="96">
+                    <img src="<%= static_path(@conn, "/images/projectkoala.png") %>" alt="Konten Anak Lokal">
                 </div>
             </a>
         </li>

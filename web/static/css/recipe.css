@@ -1,3 +1,6 @@
+.ar-nav-section {
+    background:repeating-linear-gradient( 90deg, #86d694, #86d694 , #86d694);
+}
 
 /* kss-node/css/style.css */
 @charset "UTF-8";@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic);.clearfix:after,.input-wrap:after,.input-wrap--home:after,.buttons-container .lo-container--settings .zip-container:after,.stars-container:after,.grid-col__ratings .rating-stars:after,.grid-toggle--one-col .grid-col__ratings .rating-stars:after,.rotd__ratings .rating-stars:after,.profile:after,.grid-col__ratings:after,.rotd__ratings:after,.btns-one-small--view-all-similar:after,.email-recipe:after{content:"";display:table;clear:both}

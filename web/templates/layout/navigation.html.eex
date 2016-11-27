@@ -2,7 +2,7 @@
   <div class="top-bar-left">
     <ul class="menu">
       <li class="logo">
-        Koalog - Project Koala ID
+        Project Koala - Konten Anak Lokal
       </li>
       <li>
         <%= link "Home", to: page_path(@conn, :index) %>
