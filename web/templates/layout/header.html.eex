@@ -23,11 +23,9 @@
         </li>
 
         <%= if current_user = @conn.assigns[:current_user] do %>
-          <li class="nav-profile recognized-user">
-            <div class="login-state">
-                <%= link current_user.username, to: user_path(@conn, :edit, current_user.id), class: "username icon-user--default button" %>
-            </div>
-          </li>
+        <li>
+            <span>Hi <%= current_user.username %></span>
+        </li>
           <li class="nav-profile recognized-user">
             <div class="login-state">
                 <%= link "Logout", to: session_path(@conn, :delete, current_user.id), method: :delete, class: "username icon-user--default button alert" %>
