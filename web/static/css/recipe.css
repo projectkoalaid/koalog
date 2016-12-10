@@ -2859,3 +2859,7 @@ div[data-ng-show="page === 'findfriends'"].cook--friends .grid-col--fixed-tiles:
 }@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.ar-nav .nav-search input{line-height:100%}.ngdialog-theme-rateandreview .rate-review__rating-stars .rate-star-single{background-image:url(http://images.media-allrecipes.com/ar-images/icons/star_empty.png)}
 .ngdialog-theme-rateandreview .rate-review__rating-stars .rate-star-single.star-rating{background-image:url(http://images.media-allrecipes.com/ar-images/icons/star_orange.png)}
 }
+
+.right-side-header {
+	float: right;
+}

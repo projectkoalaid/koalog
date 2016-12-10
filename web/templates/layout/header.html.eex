@@ -7,7 +7,7 @@
                 </div>
             </a>
         </li>
-        <li class="browse-recipes">
+<%#         <li class="browse-recipes">
             <a href="#" id="navmenu_recipes" class="recipes-txt">
                 <span>BROWSE</span><span class="icon--chevron-down"></span>
             </a>
@@ -21,18 +21,18 @@
                 <div id="ingredientSearch" class="ingredient-searchtxt">Cari Inspirasi</div>
             </div>
         </li>
-
+ %>
         <%= if current_user = @conn.assigns[:current_user] do %>
-        <li>
-            <span>Hi <%= current_user.username %></span>
-        </li>
-          <li class="nav-profile recognized-user">
+          <li class="nav-profile recognized-user right-side-header">
             <div class="login-state">
                 <%= link "Logout", to: session_path(@conn, :delete, current_user.id), method: :delete, class: "username icon-user--default button alert" %>
             </div>
           </li>
+        <li class="right-side-header">
+            <span>Hi <%= current_user.username %></span>
+        </li>
         <% else %>
-          <li class="nav-profile anonymous-user">
+          <li class="nav-profile anonymous-user right-side-header">
             <div class="login-state">
                 <%= link "Login", to: session_path(@conn, :new), class: "username icon-user--default button" %>
             </div>
