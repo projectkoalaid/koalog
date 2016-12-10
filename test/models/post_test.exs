@@ -2,6 +2,7 @@ defmodule Koalog.PostTest do
   use Koalog.ModelCase
 
   alias Koalog.Post
+  import Koalog.Factory
 
   @valid_attrs %{body: "some content ![image](http://abc)", title: "some content"}
   @invalid_attrs %{}
@@ -38,6 +39,17 @@ defmodule Koalog.PostTest do
   end
 
   test "test featured list n post ordered by number of approved comment and their timestamp" do
-    assert false
+    p1 = insert(:post)
+    p2 = insert(:post)
+    p3 = insert(:post)
+    p4 = insert(:post)
+    insert(:comment, approved: true, post: p1)
+    insert(:comment, approved: true, post: p2)
+    insert(:comment, approved: true, post: p2)
+    insert(:comment, approved: true, post: p3)
+    list = Post.featured(3) |> Repo.all |> Enum.map(fn(x) -> x.id end)
+    assert Enum.count(list) == 3
+    assert list == [p2.id, p3.id, p1.id]
+    refute Enum.member?(list, p4.id)
   end
 end

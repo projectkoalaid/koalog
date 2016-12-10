@@ -14,40 +14,31 @@
         </li>
         <li class="search-tab ng-scope" ng-controller="ar_controllers_search">
             <div class="nav-search">
-                <input id="searchText" type="text" placeholder="Find a recipe">
+                <input id="searchText" type="text" placeholder="Temukan kegiatan bersama si buah hati">
                 <button class="btn-basic--small search-button">
                     <span class="icon svg-icon--top-nav-bar--search-magnify svg-icon--top-nav-bar--search-magnify-dims"></span>
                 </button>
-                <div id="ingredientSearch" class="ingredient-searchtxt">Ingredient Search</div>
+                <div id="ingredientSearch" class="ingredient-searchtxt">Cari Inspirasi</div>
             </div>
         </li>
-        <li class="social-notification">
-            <div class="socialNotification">
-                <span class="svg-icon--top-nav-bar--nav-bell svg-icon--top-nav-bar--nav-bell-dims"></span>
-                <span class="notification-count ng-binding" >1</span>
+
+        <%= if current_user = @conn.assigns[:current_user] do %>
+          <li class="nav-profile recognized-user">
+            <div class="login-state">
+                <%= link current_user.username, to: user_path(@conn, :edit, current_user.id), class: "username icon-user--default button" %>
             </div>
-        </li>
-        <li class="nav-favorites">
-            <a href="#" target="_self">
-                <span class="svg-icon--top-nav-bar--grey-heart svg-icon--top-nav-bar--grey-heart-dims"></span>
-            </a>
-        </li>
-        <li class="nav-profile anonymous-user">
-            <a href="#" target="_self">
-                <div class="login-state">
-                    <div class="img-profile icon svg-icon--top-nav-bar--userhead svg-icon--top-nav-bar--userhead-dims"></div>
-                    <span class="username icon-user--default" id="offCanvasDisplayName">Create a profile</span>
-                </div>
-            </a>
-        </li>
-        <li class="hamburger-tab">
-            <a href="#">
-                <div class="hamburger-nav">
-                    <span class="browse-recipes-iconbar"></span>
-                    <span class="browse-recipes-iconbar"></span>
-                    <span class="browse-recipes-iconbar"></span>
-                </div>
-            </a>
-        </li>
+          </li>
+          <li class="nav-profile recognized-user">
+            <div class="login-state">
+                <%= link "Logout", to: session_path(@conn, :delete, current_user.id), method: :delete, class: "username icon-user--default button alert" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-profile anonymous-user">
+            <div class="login-state">
+                <%= link "Login", to: session_path(@conn, :new), class: "username icon-user--default button" %>
+            </div>
+          </li>
+        <% end %>
     </ul>
 </header>
