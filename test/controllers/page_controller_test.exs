@@ -5,6 +5,5 @@ defmodule Koalog.PageControllerTest do
     conn = get conn, "/"
     assert html_response(conn, 200) =~ "Recommended for you"
     assert html_response(conn, 200) =~ "Project Koala - Konten Anak Lokal"
-    assert html_response(conn, 200) =~ "Konten ku"
   end
 end
