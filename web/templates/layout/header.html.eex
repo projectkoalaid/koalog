@@ -28,8 +28,11 @@
                 <%= link "Logout", to: session_path(@conn, :delete, current_user.id), method: :delete, class: "username icon-user--default button alert" %>
             </div>
           </li>
-        <li class="right-side-header">
+        <li class="right-side-header nav-profile">
             <span>Hi <%= current_user.username %></span>
+        </li>
+        <li class="right-side-header nav-profile">
+            <span><%= link "Konten ku", to: user_post_path(@conn, :index, current_user.id) %></span>
         </li>
         <% else %>
           <li class="nav-profile anonymous-user right-side-header">
