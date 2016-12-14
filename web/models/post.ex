@@ -26,7 +26,7 @@ defmodule Koalog.Post do
     struct
     |> cast(params, [:title, :body])
     |> validate_required([:title, :body])
-    |> strip_unsafe_body(params)
+    # |> strip_unsafe_body(params)
     |> validate_featured_image
   end
 
