@@ -1,41 +1,19 @@
-<div class="column size-1of4">
+<div class="column">
 	<%= for post <- @posts do %>
 		<article class="grid-col--fixed-tiles">
-      <a title="Save this recipe" class="favorite ng-isolate-scope" data-imageurl="'http://images.media-allrecipes.com/userphotos'"><span class="ng-binding"></span></a>
-      <a href="#"  class="ng-isolate-scope" target="_self">
-	      <img class="grid-col__rec-image ng-isolate-scope" data-lazy-load="" alt="<%= post.title %> - <%= snippet(post.body) %>" title="<%= post.title %>" src="<%= featured_image(post.body) %>" style="display: inline;">
-	      <span class="grid-col__header-text"><%= post.title %></span>
-      </a>
+      <%= link to: user_post_path(@conn, :show, post.user, post) do %>
+        <img class="grid-col__rec-image ng-isolate-scope" alt="<%= post.title %> - <%= snippet(post.body) %>" title="<%= post.title %>" src="<%= featured_image(post.body) %>" style="display: inline;">
+      <%= end %>
       <h3 class="grid-col__h3 grid-col__h3--recipe-grid">
-      	<a href="#" class="ng-isolate-scope" target="_self"><%= post.title %></a>
-        <div class="grid-col__video">
-        <a href="#"  class="ng-isolate-scope" target="_self"></a>
-        <a href="#" class="ng-isolate-scope" target="_self"><span class="icon--videoplay-small-white"></span></a>
-        </div>
+        <%= link post.title, to: user_post_path(@conn, :show, post.user, post) %>
       </h3>
 
-      <a href="#" class="ng-isolate-scope" target="_self">
-       <div class="grid-col__ratings">
-          <div class="rating-stars" data-scroll-to-anchor="reviews" data-ratingstars="4.65000009536743">
-            <img height="16" width="16" src="http://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
-            <img height="16" width="16" src="http://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
-            <img height="16" width="16" src="http://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
-            <img height="16" width="16" src="http://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
-            <img height="16" width="16" src="http://images.media-allrecipes.com/ar-images/icons/rating-stars/half-star-2015.svg">
-          </div>
-	        <span class="grid-col__reviews">4K</span>
-          <div  style="margin: auto; margin-left: .5rem; display: inline-block; width: 122px; height: 34px">
-              <span id="ad-rotd"></span>
-              <div id="div-gpt-sponsorLogo" data-tier="1"></div><div id="div-gpt-mob-sponsorLogo" data-tier="1"></div>
-          </div>
-          <div class="rec-card__description"><% snippet(post.body) %></div>
-        </div>
-      </a>
+      <div class="rec-card__description"><% snippet(post.body) %></div>
 
       <div class="profile profile--recipe-card">
 	      <ul class="cook-details">
           <li>
-            <h4 class="no-profile"><span>Recipe by</span> <%= post.user.username%></h4>
+            <h4 class="no-profile"><span>Activity by</span> <%= post.user.username%></h4>
           </li>
 	      </ul>
       </div>
